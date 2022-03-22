@@ -104,6 +104,7 @@ namespace SQL_transaktion_Forms
             this.UncommitedButton.TabIndex = 5;
             this.UncommitedButton.Text = "Read uncommited";
             this.UncommitedButton.UseVisualStyleBackColor = true;
+            this.UncommitedButton.Click += new System.EventHandler(this.UncommitedButton_Click);
             // 
             // SerializableButton
             // 
@@ -113,6 +114,7 @@ namespace SQL_transaktion_Forms
             this.SerializableButton.TabIndex = 6;
             this.SerializableButton.Text = "Serializable";
             this.SerializableButton.UseVisualStyleBackColor = true;
+            this.SerializableButton.Click += new System.EventHandler(this.SerializableButton_Click);
             // 
             // FreeSeatsLabel
             // 
@@ -154,6 +156,7 @@ namespace SQL_transaktion_Forms
             this.ReserveButton.TabIndex = 11;
             this.ReserveButton.Text = "Reserve Seats";
             this.ReserveButton.UseVisualStyleBackColor = true;
+            this.ReserveButton.Click += new System.EventHandler(this.ReserveButton_Click);
             // 
             // FeedbackLabel
             // 

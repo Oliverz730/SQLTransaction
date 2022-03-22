@@ -16,5 +16,20 @@ namespace SQL_transaktion_Forms
         {
             InitializeComponent();
         }
+
+        private void UncommitedButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SerializableButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReserveButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
