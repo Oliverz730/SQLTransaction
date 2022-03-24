@@ -48,5 +48,37 @@ namespace SQL_transaktion_Forms
                 return false;
             }
         }
+
+        public static bool Rollback(SqlConnection conn)
+        {
+            try
+            {
+                string sqlString = "Rollback;";
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static bool Commit(SqlConnection conn)
+        {
+            try
+            {
+                string sqlString = "Commit;";
+                SqlCommand cmd = new SqlCommand(sqlString, conn);
+                cmd.ExecuteNonQuery();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
