@@ -27,8 +27,8 @@ namespace SQL_transaktion_Forms
 
         public static int[] Read(string table)
         {
-            int[] output = new int[2];
-            int index = 0;
+            List<int> output = new List<int>();
+            int index = 1;
 
             string sqlString = "SELECT * FROM " + table + ";";
             SqlCommand cmd = new SqlCommand(sqlString, conn);
@@ -36,12 +36,12 @@ namespace SQL_transaktion_Forms
 
             while (reader.Read())
             {
-                output[index] = reader.GetInt32(index);
+                output.Add(reader.GetInt32(index));
                 index++;
             }
             reader.Close();
 
-            return output;
+            return output.ToArray();
         }
         
         public static bool Update(string table, int seats, int flightNo)

@@ -30,7 +30,18 @@ namespace SQL_transaktion_Forms
 
         private void ReserveButton_Click(object sender, EventArgs e)
         {
-            DatabaseAccessor.Update("Fly", Convert.ToInt32(ReserveTextbox.Text), Convert.ToInt32(FlyNummerComboBox.Text));
+            DatabaseAccessor.Update("FlightSeats", Convert.ToInt32(ReserveTextbox.Text), Convert.ToInt32(FlyNummerComboBox.Text));
+        }
+
+        private void FlyNummerComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int[] seats = DatabaseAccessor.Read("FlightSeats");
+
+            int flight = Convert.ToInt32(FlyNummerComboBox.Text);
+
+            int seat = seats[flight - 1];
+
+            FreeSeatsTextbox.Text = seat.ToString();
         }
     }
 }
