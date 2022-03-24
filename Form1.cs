@@ -20,17 +20,17 @@ namespace SQL_transaktion_Forms
 
         private void UncommitedButton_Click(object sender, EventArgs e)
         {
-
+            DatabaseAccessor.BeginUncommited();
         }
 
         private void SerializableButton_Click(object sender, EventArgs e)
         {
-
+            DatabaseAccessor.BeginSerializable();
         }
 
         private void ReserveButton_Click(object sender, EventArgs e)
         {
-
+            DatabaseAccessor.Update("Fly", Convert.ToInt32(ReserveTextbox.Text), Convert.ToInt32(FlyNummerComboBox.Text));
         }
     }
 }
