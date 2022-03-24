@@ -68,5 +68,14 @@ namespace SQL_transaktion_Forms
         {
             return Transactions.Commit(conn);
         }
+        public static bool BeginUncommited()
+        {
+            return Transactions.ReadUncommitted(conn);
+        }
+
+        public static bool BeginSerializable()
+        {
+            return Transactions.Serializable(conn);
+        }
     }
 }
