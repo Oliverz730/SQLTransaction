@@ -43,6 +43,8 @@ namespace SQL_transaktion_Forms
             this.ReserveButton = new System.Windows.Forms.Button();
             this.FeedbackLabel = new System.Windows.Forms.Label();
             this.FeedbackTextbox = new System.Windows.Forms.TextBox();
+            this.CommitButton = new System.Windows.Forms.Button();
+            this.RollbackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FlyNummerLabel
@@ -135,7 +137,7 @@ namespace SQL_transaktion_Forms
             // NumberOfSeatsLabel
             // 
             this.NumberOfSeatsLabel.AutoSize = true;
-            this.NumberOfSeatsLabel.Location = new System.Drawing.Point(39, 335);
+            this.NumberOfSeatsLabel.Location = new System.Drawing.Point(31, 300);
             this.NumberOfSeatsLabel.Name = "NumberOfSeatsLabel";
             this.NumberOfSeatsLabel.Size = new System.Drawing.Size(140, 13);
             this.NumberOfSeatsLabel.TabIndex = 9;
@@ -143,14 +145,14 @@ namespace SQL_transaktion_Forms
             // 
             // ReserveTextbox
             // 
-            this.ReserveTextbox.Location = new System.Drawing.Point(188, 335);
+            this.ReserveTextbox.Location = new System.Drawing.Point(180, 300);
             this.ReserveTextbox.Name = "ReserveTextbox";
             this.ReserveTextbox.Size = new System.Drawing.Size(100, 20);
             this.ReserveTextbox.TabIndex = 10;
             // 
             // ReserveButton
             // 
-            this.ReserveButton.Location = new System.Drawing.Point(86, 383);
+            this.ReserveButton.Location = new System.Drawing.Point(86, 349);
             this.ReserveButton.Name = "ReserveButton";
             this.ReserveButton.Size = new System.Drawing.Size(96, 23);
             this.ReserveButton.TabIndex = 11;
@@ -161,7 +163,7 @@ namespace SQL_transaktion_Forms
             // FeedbackLabel
             // 
             this.FeedbackLabel.AutoSize = true;
-            this.FeedbackLabel.Location = new System.Drawing.Point(39, 448);
+            this.FeedbackLabel.Location = new System.Drawing.Point(39, 472);
             this.FeedbackLabel.Name = "FeedbackLabel";
             this.FeedbackLabel.Size = new System.Drawing.Size(113, 13);
             this.FeedbackLabel.TabIndex = 12;
@@ -169,16 +171,36 @@ namespace SQL_transaktion_Forms
             // 
             // FeedbackTextbox
             // 
-            this.FeedbackTextbox.Location = new System.Drawing.Point(162, 448);
+            this.FeedbackTextbox.Location = new System.Drawing.Point(162, 472);
             this.FeedbackTextbox.Name = "FeedbackTextbox";
             this.FeedbackTextbox.Size = new System.Drawing.Size(100, 20);
             this.FeedbackTextbox.TabIndex = 13;
+            // 
+            // CommitButton
+            // 
+            this.CommitButton.Location = new System.Drawing.Point(42, 407);
+            this.CommitButton.Name = "CommitButton";
+            this.CommitButton.Size = new System.Drawing.Size(75, 23);
+            this.CommitButton.TabIndex = 14;
+            this.CommitButton.Text = "Commit";
+            this.CommitButton.UseVisualStyleBackColor = true;
+            // 
+            // RollbackButton
+            // 
+            this.RollbackButton.Location = new System.Drawing.Point(139, 407);
+            this.RollbackButton.Name = "RollbackButton";
+            this.RollbackButton.Size = new System.Drawing.Size(75, 23);
+            this.RollbackButton.TabIndex = 15;
+            this.RollbackButton.Text = "Rollback";
+            this.RollbackButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 534);
+            this.Controls.Add(this.RollbackButton);
+            this.Controls.Add(this.CommitButton);
             this.Controls.Add(this.FeedbackTextbox);
             this.Controls.Add(this.FeedbackLabel);
             this.Controls.Add(this.ReserveButton);
@@ -216,6 +238,8 @@ namespace SQL_transaktion_Forms
         private System.Windows.Forms.Button ReserveButton;
         private System.Windows.Forms.Label FeedbackLabel;
         private System.Windows.Forms.TextBox FeedbackTextbox;
+        private System.Windows.Forms.Button CommitButton;
+        private System.Windows.Forms.Button RollbackButton;
     }
 }
 
