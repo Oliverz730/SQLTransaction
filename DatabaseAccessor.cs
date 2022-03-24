@@ -58,5 +58,15 @@ namespace SQL_transaktion_Forms
                 return false;
             }
         }
+
+        public static bool Rollback()
+        {
+            return Transactions.Rollback(conn);
+        }
+
+        public static bool Commit()
+        {
+            return Transactions.Commit(conn);
+        }
     }
 }

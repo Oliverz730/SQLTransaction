@@ -14,6 +14,7 @@ namespace SQL_transaktion_Forms
     {
         public Form1()
         {
+            DatabaseAccessor.canOpen();
             InitializeComponent();
         }
 
