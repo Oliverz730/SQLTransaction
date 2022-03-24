@@ -31,6 +31,7 @@ namespace SQL_transaktion_Forms
         private void ReserveButton_Click(object sender, EventArgs e)
         {
             DatabaseAccessor.Update("FlightSeats", Convert.ToInt32(ReserveTextbox.Text), Convert.ToInt32(FlyNummerComboBox.Text));
+            CommitButton.Enabled = true;
         }
 
         private void FlyNummerComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,6 +43,22 @@ namespace SQL_transaktion_Forms
             int seat = seats[flight - 1];
 
             FreeSeatsTextbox.Text = seat.ToString();
+        }
+
+        private void CommitButton_Click(object sender, EventArgs e)
+        {
+
+
+            CommitButton.Enabled = false;
+            RollbackButton.Enabled = false;
+        }
+
+        private void RollbackButton_Click(object sender, EventArgs e)
+        {
+
+
+            RollbackButton.Enabled = false;
+            CommitButton.Enabled = false;
         }
     }
 }

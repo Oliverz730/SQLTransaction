@@ -12,6 +12,7 @@ namespace SQL_transaktion_Forms
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// 
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,6 +21,9 @@ namespace SQL_transaktion_Forms
             }
             base.Dispose(disposing);
         }
+
+        
+
 
         #region Windows Form Designer generated code
 
@@ -50,10 +54,9 @@ namespace SQL_transaktion_Forms
             // FlyNummerLabel
             // 
             this.FlyNummerLabel.AutoSize = true;
-            this.FlyNummerLabel.Location = new System.Drawing.Point(52, 43);
-            this.FlyNummerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FlyNummerLabel.Location = new System.Drawing.Point(39, 35);
             this.FlyNummerLabel.Name = "FlyNummerLabel";
-            this.FlyNummerLabel.Size = new System.Drawing.Size(79, 16);
+            this.FlyNummerLabel.Size = new System.Drawing.Size(63, 13);
             this.FlyNummerLabel.TabIndex = 0;
             this.FlyNummerLabel.Text = "Fly nummer:";
             // 
@@ -67,49 +70,44 @@ namespace SQL_transaktion_Forms
             "4",
             "5",
             "6"});
-            this.FlyNummerComboBox.Location = new System.Drawing.Point(175, 43);
-            this.FlyNummerComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FlyNummerComboBox.Location = new System.Drawing.Point(131, 35);
             this.FlyNummerComboBox.Name = "FlyNummerComboBox";
-            this.FlyNummerComboBox.Size = new System.Drawing.Size(160, 24);
+            this.FlyNummerComboBox.Size = new System.Drawing.Size(121, 21);
             this.FlyNummerComboBox.TabIndex = 1;
             this.FlyNummerComboBox.SelectedIndexChanged += new System.EventHandler(this.FlyNummerComboBox_SelectedIndexChanged);
             // 
             // TransactionLabel
             // 
             this.TransactionLabel.AutoSize = true;
-            this.TransactionLabel.Location = new System.Drawing.Point(52, 116);
-            this.TransactionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TransactionLabel.Location = new System.Drawing.Point(39, 94);
             this.TransactionLabel.Name = "TransactionLabel";
-            this.TransactionLabel.Size = new System.Drawing.Size(81, 16);
+            this.TransactionLabel.Size = new System.Drawing.Size(66, 13);
             this.TransactionLabel.TabIndex = 2;
             this.TransactionLabel.Text = "Transaction:";
             // 
             // GetSeatLabel
             // 
             this.GetSeatLabel.AutoSize = true;
-            this.GetSeatLabel.Location = new System.Drawing.Point(79, 154);
-            this.GetSeatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.GetSeatLabel.Location = new System.Drawing.Point(59, 125);
             this.GetSeatLabel.Name = "GetSeatLabel";
-            this.GetSeatLabel.Size = new System.Drawing.Size(67, 16);
+            this.GetSeatLabel.Size = new System.Drawing.Size(55, 13);
             this.GetSeatLabel.TabIndex = 3;
             this.GetSeatLabel.Text = "Get seats:";
             // 
             // GetSeatsLabel
             // 
             this.GetSeatsLabel.AutoSize = true;
-            this.GetSeatsLabel.Location = new System.Drawing.Point(83, 193);
-            this.GetSeatsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.GetSeatsLabel.Location = new System.Drawing.Point(62, 157);
             this.GetSeatsLabel.Name = "GetSeatsLabel";
-            this.GetSeatsLabel.Size = new System.Drawing.Size(192, 16);
+            this.GetSeatsLabel.Size = new System.Drawing.Size(152, 13);
             this.GetSeatsLabel.TabIndex = 4;
             this.GetSeatsLabel.Text = "Get available seats by method:";
             // 
             // UncommitedButton
             // 
-            this.UncommitedButton.Location = new System.Drawing.Point(40, 238);
-            this.UncommitedButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UncommitedButton.Location = new System.Drawing.Point(30, 193);
             this.UncommitedButton.Name = "UncommitedButton";
-            this.UncommitedButton.Size = new System.Drawing.Size(136, 28);
+            this.UncommitedButton.Size = new System.Drawing.Size(102, 23);
             this.UncommitedButton.TabIndex = 5;
             this.UncommitedButton.Text = "Read uncommited";
             this.UncommitedButton.UseVisualStyleBackColor = true;
@@ -117,10 +115,9 @@ namespace SQL_transaktion_Forms
             // 
             // SerializableButton
             // 
-            this.SerializableButton.Location = new System.Drawing.Point(216, 238);
-            this.SerializableButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SerializableButton.Location = new System.Drawing.Point(162, 193);
             this.SerializableButton.Name = "SerializableButton";
-            this.SerializableButton.Size = new System.Drawing.Size(100, 28);
+            this.SerializableButton.Size = new System.Drawing.Size(75, 23);
             this.SerializableButton.TabIndex = 6;
             this.SerializableButton.Text = "Serializable";
             this.SerializableButton.UseVisualStyleBackColor = true;
@@ -129,45 +126,40 @@ namespace SQL_transaktion_Forms
             // FreeSeatsLabel
             // 
             this.FreeSeatsLabel.AutoSize = true;
-            this.FreeSeatsLabel.Location = new System.Drawing.Point(52, 295);
-            this.FreeSeatsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FreeSeatsLabel.Location = new System.Drawing.Point(39, 240);
             this.FreeSeatsLabel.Name = "FreeSeatsLabel";
-            this.FreeSeatsLabel.Size = new System.Drawing.Size(161, 16);
+            this.FreeSeatsLabel.Size = new System.Drawing.Size(131, 13);
             this.FreeSeatsLabel.TabIndex = 7;
             this.FreeSeatsLabel.Text = "Free seats on the flightNo:";
             // 
             // FreeSeatsTextbox
             // 
-            this.FreeSeatsTextbox.Location = new System.Drawing.Point(240, 295);
-            this.FreeSeatsTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FreeSeatsTextbox.Location = new System.Drawing.Point(180, 240);
             this.FreeSeatsTextbox.Name = "FreeSeatsTextbox";
-            this.FreeSeatsTextbox.Size = new System.Drawing.Size(132, 22);
+            this.FreeSeatsTextbox.Size = new System.Drawing.Size(100, 20);
             this.FreeSeatsTextbox.TabIndex = 8;
             // 
             // NumberOfSeatsLabel
             // 
             this.NumberOfSeatsLabel.AutoSize = true;
-            this.NumberOfSeatsLabel.Location = new System.Drawing.Point(41, 369);
-            this.NumberOfSeatsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NumberOfSeatsLabel.Location = new System.Drawing.Point(31, 300);
             this.NumberOfSeatsLabel.Name = "NumberOfSeatsLabel";
-            this.NumberOfSeatsLabel.Size = new System.Drawing.Size(176, 16);
+            this.NumberOfSeatsLabel.Size = new System.Drawing.Size(140, 13);
             this.NumberOfSeatsLabel.TabIndex = 9;
             this.NumberOfSeatsLabel.Text = "Number og seats to reserve:";
             // 
             // ReserveTextbox
             // 
-            this.ReserveTextbox.Location = new System.Drawing.Point(240, 369);
-            this.ReserveTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReserveTextbox.Location = new System.Drawing.Point(180, 300);
             this.ReserveTextbox.Name = "ReserveTextbox";
-            this.ReserveTextbox.Size = new System.Drawing.Size(132, 22);
+            this.ReserveTextbox.Size = new System.Drawing.Size(100, 20);
             this.ReserveTextbox.TabIndex = 10;
             // 
             // ReserveButton
             // 
-            this.ReserveButton.Location = new System.Drawing.Point(115, 430);
-            this.ReserveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReserveButton.Location = new System.Drawing.Point(86, 349);
             this.ReserveButton.Name = "ReserveButton";
-            this.ReserveButton.Size = new System.Drawing.Size(128, 28);
+            this.ReserveButton.Size = new System.Drawing.Size(96, 23);
             this.ReserveButton.TabIndex = 11;
             this.ReserveButton.Text = "Reserve Seats";
             this.ReserveButton.UseVisualStyleBackColor = true;
@@ -176,46 +168,46 @@ namespace SQL_transaktion_Forms
             // FeedbackLabel
             // 
             this.FeedbackLabel.AutoSize = true;
-            this.FeedbackLabel.Location = new System.Drawing.Point(52, 581);
-            this.FeedbackLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FeedbackLabel.Location = new System.Drawing.Point(39, 472);
             this.FeedbackLabel.Name = "FeedbackLabel";
-            this.FeedbackLabel.Size = new System.Drawing.Size(142, 16);
+            this.FeedbackLabel.Size = new System.Drawing.Size(113, 13);
             this.FeedbackLabel.TabIndex = 12;
             this.FeedbackLabel.Text = "Feedback from server:";
             // 
             // FeedbackTextbox
             // 
-            this.FeedbackTextbox.Location = new System.Drawing.Point(216, 581);
-            this.FeedbackTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FeedbackTextbox.Location = new System.Drawing.Point(162, 472);
             this.FeedbackTextbox.Name = "FeedbackTextbox";
-            this.FeedbackTextbox.Size = new System.Drawing.Size(132, 22);
+            this.FeedbackTextbox.Size = new System.Drawing.Size(100, 20);
             this.FeedbackTextbox.TabIndex = 13;
             // 
             // CommitButton
             // 
-            this.CommitButton.Location = new System.Drawing.Point(56, 501);
-            this.CommitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CommitButton.Enabled = false;
+            this.CommitButton.Location = new System.Drawing.Point(42, 407);
             this.CommitButton.Name = "CommitButton";
-            this.CommitButton.Size = new System.Drawing.Size(100, 28);
+            this.CommitButton.Size = new System.Drawing.Size(75, 23);
             this.CommitButton.TabIndex = 14;
             this.CommitButton.Text = "Commit";
             this.CommitButton.UseVisualStyleBackColor = true;
+            this.CommitButton.Click += new System.EventHandler(this.CommitButton_Click);
             // 
             // RollbackButton
             // 
-            this.RollbackButton.Location = new System.Drawing.Point(185, 501);
-            this.RollbackButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RollbackButton.Enabled = false;
+            this.RollbackButton.Location = new System.Drawing.Point(139, 407);
             this.RollbackButton.Name = "RollbackButton";
-            this.RollbackButton.Size = new System.Drawing.Size(100, 28);
+            this.RollbackButton.Size = new System.Drawing.Size(75, 23);
             this.RollbackButton.TabIndex = 15;
             this.RollbackButton.Text = "Rollback";
             this.RollbackButton.UseVisualStyleBackColor = true;
+            this.RollbackButton.Click += new System.EventHandler(this.RollbackButton_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 657);
+            this.ClientSize = new System.Drawing.Size(292, 534);
             this.Controls.Add(this.RollbackButton);
             this.Controls.Add(this.CommitButton);
             this.Controls.Add(this.FeedbackTextbox);
@@ -232,7 +224,6 @@ namespace SQL_transaktion_Forms
             this.Controls.Add(this.TransactionLabel);
             this.Controls.Add(this.FlyNummerComboBox);
             this.Controls.Add(this.FlyNummerLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
