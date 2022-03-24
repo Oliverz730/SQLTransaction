@@ -32,22 +32,21 @@ namespace SQL_transaktion_Forms
         {
             DatabaseAccessor.Update("FlightSeats", Convert.ToInt32(ReserveTextbox.Text), Convert.ToInt32(FlyNummerComboBox.Text));
             CommitButton.Enabled = true;
+            RollbackButton.Enabled = true;
         }
 
         private void FlyNummerComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int[] seats = DatabaseAccessor.Read("FlightSeats");
-
             int flight = Convert.ToInt32(FlyNummerComboBox.Text);
 
-            int seat = seats[flight - 1];
+            int seat = DatabaseAccessor.Read("FlightSeats", flight);
 
             FreeSeatsTextbox.Text = seat.ToString();
         }
 
         private void CommitButton_Click(object sender, EventArgs e)
         {
-
+            DatabaseAccessor.Commit();
 
             CommitButton.Enabled = false;
             RollbackButton.Enabled = false;
@@ -55,7 +54,7 @@ namespace SQL_transaktion_Forms
 
         private void RollbackButton_Click(object sender, EventArgs e)
         {
-
+            DatabaseAccessor.Rollback();
 
             RollbackButton.Enabled = false;
             CommitButton.Enabled = false;

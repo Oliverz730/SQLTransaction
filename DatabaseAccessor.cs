@@ -25,23 +25,21 @@ namespace SQL_transaktion_Forms
             }
         }
 
-        public static int[] Read(string table)
+        public static int Read(string table, int flightNo)
         {
-            List<int> output = new List<int>();
+            int output = 0;
             int index = 1;
 
-            string sqlString = "SELECT * FROM " + table + ";";
+            string sqlString = "SELECT seatsFree FROM " + table + " WHERE flightNo =" + flightNo + ";";
             SqlCommand cmd = new SqlCommand(sqlString, conn);
             SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
 
-            while (reader.Read())
-            {
-                output.Add(reader.GetInt32(index));
-                index++;
-            }
+            output = reader.GetInt32(0);
+
             reader.Close();
 
-            return output.ToArray();
+            return output;
         }
         
         public static bool Update(string table, int seats, int flightNo)
